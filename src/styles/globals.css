@@ -2,26 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html.light {
+  --line-color: #e5e7eb;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html.dark {
+  --line-color: rgb(38, 38, 38);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply overflow-x-hidden;
+}
+
+.wrapper {
+  @apply container px-6 sm:px-8 lg:px-16 xl:px-24;
+}
+
+.curve svg,
+.curve .background {
+  width: 100vw;
+  height: calc(100vh + 600px);
+  top: -300px;
+  left: 0;
+  position: fixed;
+  pointer-events: none;
+  z-index: 51;
+}
+
+.curve .background {
+  background-color: #121212;
+}
+
+.routes {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 52;
+}
+
+.light .inner {
+  background-color: black;
+}
+
+.light .inner .page {
+  background-color: white;
+}
+
+.light .inner .slide {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.dark .inner {
+  background-color: black;
+}
+
+.dark .inner .page {
+  background-color: rgb(23, 23, 23);
+}
+
+.dark .inner .slide {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgb(23, 23, 23);
+  z-index: 1;
 }
