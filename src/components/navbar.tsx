@@ -10,6 +10,7 @@ import {
   useScroll,
 } from "framer-motion";
 import Link from "next/link";
+import { fadeIn } from "@/lib/motion";
 
 const titleAnimation: Variants = {
   rest: {
@@ -128,7 +129,7 @@ const Navbar: React.FC = () => {
   ];
 
   const animation = {
-    initial: { y: "-100%" },
+    initial: { y: "100%" },
     enter: (i: number) => ({
       y: "0",
       transition: {
@@ -140,38 +141,30 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <header
-      className={`sticky top-0 left-0 w-full bg-white dark:bg-neutral-900 z-50`}
-    >
-      <motion.div
-        variants={{
-          hidden: { width: 0 },
-          visible: { width: "100%" },
-        }}
-        animate={isScrolled ? "visible" : "hidden"}
-        transition={{ duration: 0.35, ease: "easeInOut" }}
-        className="absolute bottom-0 left-0 w-full h-full border-b border-neutral-200 dark:border-neutral-800"
-      ></motion.div>
+    <header className={`relative top-0 left-0 w-full text-white z-50`}>
+      <div className="absolute w-[50%] inset-0 gradient-nav"></div>
       <div className="wrapper flex items-center justify-between py-4">
-        <div className="overflow-hidden">
-          <Link href="/">
-            <motion.h1
-              custom={1}
-              variants={animation}
-              initial="initial"
-              animate="enter"
-              className="text-2xl font-bold text-dark dark:text-white"
-            >
-              Daffa Azhar
-            </motion.h1>
-          </Link>
-        </div>
+        <Link href="/">
+          <motion.h1
+            custom={1}
+            variants={fadeIn({
+              direction: "down",
+              duration: 0.5,
+              delay: 0,
+            })}
+            initial="initial"
+            animate="enter"
+            className="text-2xl font-bold text-dark dark:text-white"
+          >
+            Daffa Azhar
+          </motion.h1>
+        </Link>
         <div className="flex items-center gap-x-2 md:gap-x-6">
           <div className="order-last block md:hidden">
             <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetTrigger>
                 <Button asChild variant="outline" size="icon" className="p-2">
-                  <Menu />
+                  <Menu className="text-primary" />
                 </Button>
               </SheetTrigger>
               <SheetContent>
@@ -190,21 +183,23 @@ const Navbar: React.FC = () => {
           <ul className="order-first hidden flex-row gap-x-6 md:flex">
             {navLinks.map((link, i) => {
               return (
-                <div key={i} className="overflow-hidden">
-                  <motion.div
-                    custom={i + 5}
-                    variants={animation}
-                    initial="initial"
-                    animate="enter"
-                    className="relative"
-                  >
-                    <AnimatedLink title={link.title} href={link.href} />
-                  </motion.div>
-                </div>
+                <motion.div
+                  key={i}
+                  variants={fadeIn({
+                    direction: "down",
+                    duration: 0.5,
+                    delay: (i + 1) * 0.15,
+                  })}
+                  initial="initial"
+                  animate="enter"
+                  className="relative"
+                >
+                  <AnimatedLink title={link.title} href={link.href} />
+                </motion.div>
               );
             })}
           </ul>
-          <ThemeSwitcher />
+          {/* <ThemeSwitcher /> */}
         </div>
       </div>
     </header>
