@@ -3,6 +3,7 @@ import { motion, AnimatePresence, Variants } from "framer-motion";
 import { inter } from "@/lib/fonts";
 import Navbar from "@/components/navbar";
 import "@/styles/globals.css";
+import "devicon/devicon.min.css";
 
 const perspective = {
   initial: {

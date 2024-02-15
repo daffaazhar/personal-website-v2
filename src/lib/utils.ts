@@ -1,6 +1,7 @@
 import { marked } from "marked";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { techStackData } from "@/lib/data";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -15,4 +16,8 @@ export const renderMarkdownWithIds = (markdownContent: string) => {
   };
 
   return marked(markdownContent, { renderer });
+};
+
+export const getIconByTechStack = (techStack: string) => {
+  return techStackData[techStack.toLowerCase()];
 };

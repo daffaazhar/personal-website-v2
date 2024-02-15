@@ -4,26 +4,9 @@ import { firaCode } from "@/lib/fonts";
 import { fadeIn } from "@/lib/motion";
 import { Button } from "@/components/ui/button";
 import { ProjectCard } from "@/components/ui/project-card";
-import "devicon/devicon.min.css";
+import { ProjectMetadata } from "@/lib/types";
 
-const DATAS = [
-  {
-    image: "/projects/duitkiddo.png",
-    title: "Duit Kiddo",
-    description:
-      "A banking app built to help parents teach their children about financial literacy and responsibility.",
-    icons: ["devicon-flutter-plain", "devicon-nextjs-plain"],
-  },
-  {
-    image: "/projects/duitkiddo.png",
-    title: "EduCode",
-    description:
-      "Information & Tech online course website. Built for ITCC 2021 Udayana University.",
-    icons: ["devicon-flutter-plain", "devicon-nextjs-plain"],
-  },
-];
-
-const FeaturedProject = () => {
+const FeaturedProject = ({ metadatas }: { metadatas: ProjectMetadata[] }) => {
   const { ref, inView } = useInView({
     threshold: 0.25,
     triggerOnce: true,
@@ -65,7 +48,7 @@ const FeaturedProject = () => {
         animate={inView ? "enter" : ""}
         className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
       >
-        {DATAS.map((data, index) => (
+        {metadatas.map((data, index) => (
           <ProjectCard key={index} data={data} />
         ))}
       </motion.div>

@@ -5,27 +5,36 @@ import Company from "@/components/section/company";
 import FeaturedProject from "@/components/section/featured-project";
 import LatestWriting from "@/components/section/latest-article";
 import GetInTouch from "@/components/section/get-in-touch";
+import { ArticleMetadata, ProjectMetadata } from "@/lib/types";
 import { getArticles } from "@/lib/articles";
-import { ArticleMetadata } from "@/lib/types";
+import { getProjects } from "@/lib/projects";
 
 export async function getStaticProps() {
   const articles = getArticles(4);
+  const projects = getProjects(3);
 
   return {
     props: {
       articles,
+      projects,
     },
   };
 }
 
-export default function Home({ articles }: { articles: ArticleMetadata[] }) {
+export default function Home({
+  articles,
+  projects,
+}: {
+  articles: ArticleMetadata[];
+  projects: ProjectMetadata[];
+}) {
   return (
     <>
       <Intro />
       <Overview />
       <Experience />
       <Company />
-      <FeaturedProject />
+      <FeaturedProject metadatas={projects} />
       <LatestWriting metadatas={articles} />
       <GetInTouch />
     </>

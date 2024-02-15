@@ -1,17 +1,12 @@
 import { motion } from "framer-motion";
-import { fadeIn } from "@/lib/motion";
 import Link from "next/link";
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
+import { ProjectMetadata } from "@/lib/types";
+import { getIconByTechStack } from "@/lib/utils";
+import { techStackData } from "@/lib/data";
 
-interface ProjectData {
-  image: string;
-  title: string;
-  description: string;
-  icons: string[];
-}
-
-const ProjectCard = ({ data }: { data: ProjectData }) => {
+const ProjectCard = ({ data }: { data: ProjectMetadata }) => {
   return (
     <Tilt
       perspective={1000}
@@ -22,7 +17,7 @@ const ProjectCard = ({ data }: { data: ProjectData }) => {
       glareBorderRadius="20px"
       transitionSpeed={2000}
     >
-      <Link href="">
+      <Link href={`projects/${data.slug}`}>
         <motion.div
           className="rounded-2xl border border-white overflow-hidden p-4 flex flex-col h-full"
           style={{
@@ -38,13 +33,15 @@ const ProjectCard = ({ data }: { data: ProjectData }) => {
             className="rounded-xl w-full"
           />
           <h3 className="font-bold text-lg text-white mt-4">{data.title}</h3>
-          <p className="text-[#c7c7c7] mt-1">{data.description}</p>
+          <p className="text-[#c7c7c7] mt-1">{data.overview}</p>
           <div className="mt-4 flex items-end gap-3 flex-grow">
-            {data.icons.map((icon: string, index: number) => {
+            {data.techStacks.map((techStack: string, index: number) => {
               return (
                 <i
                   key={`icon-${index}`}
-                  className={`${icon} text-2xl text-white`}
+                  className={`${getIconByTechStack(
+                    techStack
+                  )} text-2xl text-white`}
                 ></i>
               );
             })}

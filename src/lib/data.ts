@@ -27,3 +27,15 @@ export const experiencesData = [
     date: "2021 - present",
   },
 ] as const;
+
+export const techStackData = {
+  php: "devicon-php-plain",
+  javascript: "devicon-javascript-plain",
+  flutter: "devicon-flutter-plain",
+  nextjs: "devicon-nextjs-plain",
+  firebase: "devicon-firebase-plain",
+  tailwind: "devicon-tailwindcss-original",
+  sass: "devicon-sass-original",
+  css: "devicon-css3-plain",
+  figma: "devicon-figma-plain",
+};

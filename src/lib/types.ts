@@ -5,3 +5,11 @@ export interface ArticleMetadata {
   slug: string;
   overview: string;
 }
+
+export interface ProjectMetadata {
+  image: string;
+  title: string;
+  slug: string;
+  overview: string;
+  techStacks: string[];
+}
