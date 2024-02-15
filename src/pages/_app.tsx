@@ -1,5 +1,4 @@
 import type { AppProps } from "next/app";
-import { ThemeProvider } from "@/components/theme-provider";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import { inter } from "@/lib/fonts";
 import Navbar from "@/components/navbar";
@@ -27,10 +26,10 @@ const perspective = {
 
 const slide = {
   initial: {
-    y: "100vh",
+    y: "100dvh",
   },
   enter: {
-    y: "100vh",
+    y: "100dvh",
   },
   exit: {
     y: 0,
@@ -67,22 +66,20 @@ const anim = (variants: Variants) => {
 
 export default function App({ Component, pageProps, router }: AppProps) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <main className={`antialiased ${inter.className}`}>
-        <AnimatePresence mode="wait">
-          <motion.div className="inner" key={router.route}>
-            <motion.div className="slide" {...anim(slide)} />
-            <motion.div className="page" {...anim(perspective)}>
+    <main className={`antialiased ${inter.className}`}>
+      <AnimatePresence mode="wait">
+        <motion.div className="inner" key={router.route}>
+          <motion.div className="slide" {...anim(slide)} />
+          <motion.div className="page" {...anim(perspective)}>
+            <motion.div {...anim(opacity)}>
+              <Navbar />
               <motion.div {...anim(opacity)}>
-                <Navbar />
-                <motion.div {...anim(opacity)}>
-                  <Component {...pageProps} />
-                </motion.div>
+                <Component {...pageProps} />
               </motion.div>
             </motion.div>
           </motion.div>
-        </AnimatePresence>
-      </main>
-    </ThemeProvider>
+        </motion.div>
+      </AnimatePresence>
+    </main>
   );
 }
