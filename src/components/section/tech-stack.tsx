@@ -31,7 +31,7 @@ const TechStack = () => {
           animate={inView ? "enter" : ""}
           className={`${firaCode.className} text-white`}
         >
-          Things I use to develop my entire projects
+          Things I use to develop all my projects
         </motion.p>
         <motion.h2
           variants={fadeIn({
