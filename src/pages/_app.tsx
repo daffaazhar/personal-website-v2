@@ -1,3 +1,4 @@
+import React, { useEffect, useRef } from "react";
 import type { AppProps } from "next/app";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import { inter } from "@/lib/fonts";

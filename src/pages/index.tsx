@@ -5,6 +5,7 @@ import Company from "@/components/section/company";
 import FeaturedProject from "@/components/section/featured-project";
 import LatestWriting from "@/components/section/latest-article";
 import GetInTouch from "@/components/section/get-in-touch";
+import TechStack from "@/components/section/tech-stack";
 import { ArticleMetadata, ProjectMetadata } from "@/lib/types";
 import { getArticles } from "@/lib/articles";
 import { getProjects } from "@/lib/projects";
@@ -34,6 +35,7 @@ export default function Home({
       <Overview />
       <Experience />
       <Company />
+      <TechStack />
       <FeaturedProject metadatas={projects} />
       <LatestWriting metadatas={articles} />
       <GetInTouch />

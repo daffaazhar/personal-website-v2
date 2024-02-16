@@ -4,10 +4,11 @@ import matter from "gray-matter";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/motion";
 import { ProjectMetadata } from "@/lib/types";
-import { getIconByTechStack, renderMarkdownWithIds } from "@/lib/utils";
+import { renderMarkdownWithIds } from "@/lib/utils";
 import { TableOfContent } from "@/components/table-of-content";
 import Footer from "@/components/footer";
 import Image from "next/image";
+import { techStackData } from "@/lib/data";
 
 export async function getStaticPaths() {
   const files = fs.readdirSync(path.join("projects"));
@@ -118,9 +119,7 @@ const DetailProject = ({
               return (
                 <i
                   key={`icon-${index}`}
-                  className={`${getIconByTechStack(
-                    techStack
-                  )} text-2xl text-white`}
+                  className={`${techStackData[techStack]} text-2xl text-white`}
                 ></i>
               );
             })}

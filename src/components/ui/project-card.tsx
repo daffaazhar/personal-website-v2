@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
 import { ProjectMetadata } from "@/lib/types";
-import { getIconByTechStack } from "@/lib/utils";
 import { techStackData } from "@/lib/data";
 
 const ProjectCard = ({ data }: { data: ProjectMetadata }) => {
@@ -39,9 +38,7 @@ const ProjectCard = ({ data }: { data: ProjectMetadata }) => {
               return (
                 <i
                   key={`icon-${index}`}
-                  className={`${getIconByTechStack(
-                    techStack
-                  )} text-2xl text-white`}
+                  className={`${techStackData[techStack]} text-2xl text-white`}
                 ></i>
               );
             })}

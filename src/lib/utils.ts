@@ -17,7 +17,3 @@ export const renderMarkdownWithIds = (markdownContent: string) => {
 
   return marked(markdownContent, { renderer });
 };
-
-export const getIconByTechStack = (techStack: string) => {
-  return techStackData[techStack.toLowerCase()];
-};

@@ -1,41 +1,50 @@
 import React from "react";
-import { GraduationCap } from "lucide-react";
+import { Briefcase, GraduationCap, School2 } from "lucide-react";
+import { TechStack } from "./types";
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Freelance Wordpress Developer",
+    location: "Toko Ahsan, Kalimantan, Indonesia",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(GraduationCap),
-    date: "2019",
+      "Developing an single vendor e-commerce website from scratch. Starting from feature planning, website design, 3rd party API integration, until the deployment stage.",
+    icon: React.createElement(Briefcase),
+    date: "2020 - 2021",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Attending College",
+    location:
+      "Electronic Engineering Polytechnic Institute of Surabaya (EEPIS), Surabaya, Indonesia",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(GraduationCap),
-    date: "2019 - 2021",
+      "Being part of the Front-End developers in E-Code, an organization responsible for developing applications needed by all student organizations in EEPIS.",
+    icon: React.createElement(School2),
+    date: "2022 - Present",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Intern Front-End Developer",
+    location: "Data Polis, Jakarta, Indonesia",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(GraduationCap),
-    date: "2021 - present",
+      "Collaborated with a team of designers and back-end developers on various projects, including siap.apari.or.id, bsakp.apari.or.id, and eztakaful.com.my.",
+    icon: React.createElement(Briefcase),
+    date: "2023 - Present",
   },
 ] as const;
 
 export const techStackData = {
-  php: "devicon-php-plain",
-  javascript: "devicon-javascript-plain",
-  flutter: "devicon-flutter-plain",
-  nextjs: "devicon-nextjs-plain",
-  firebase: "devicon-firebase-plain",
-  tailwind: "devicon-tailwindcss-original",
-  sass: "devicon-sass-original",
-  css: "devicon-css3-plain",
-  figma: "devicon-figma-plain",
-};
+  PHP: "devicon-php-plain",
+  JavaScript: "devicon-javascript-plain",
+  TypeScript: "devicon-typescript-plain",
+  Dart: "devicon-dart-plain",
+  Flutter: "devicon-flutter-plain",
+  NextJS: "devicon-nextjs-plain",
+  React: "devicon-react-original",
+  Firebase: "devicon-firebase-plain",
+  Tailwind: "devicon-tailwindcss-original",
+  SASS: "devicon-sass-original",
+  CSS: "devicon-css3-plain",
+  Figma: "devicon-figma-plain",
+  Prisma: "devicon-prisma-original",
+  NodeJS: "devicon-nodejs-plain",
+  Postgres: "devicon-postgresql-plain",
+  Gitlab: "devicon-gitlab-plain",
+} as TechStack;

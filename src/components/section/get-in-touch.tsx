@@ -36,7 +36,7 @@ const GetInTouch = () => {
             })}
             initial="initial"
             animate={inView ? "enter" : ""}
-            className="font-extrabold text-white text-7xl"
+            className="font-extrabold text-white text-2xl sm:text-7xl"
           >
             Want to have coffee together?
           </motion.h2>
@@ -48,7 +48,7 @@ const GetInTouch = () => {
             })}
             initial="initial"
             animate={inView ? "enter" : ""}
-            className="font-extrabold text-white text-7xl"
+            className="font-extrabold text-white text-2xl sm:text-7xl"
           >
             Have any project ideas?
           </motion.h2>
@@ -60,7 +60,7 @@ const GetInTouch = () => {
             })}
             initial="initial"
             animate={inView ? "enter" : ""}
-            className="font-extrabold text-white text-7xl"
+            className="font-extrabold text-white text-2xl sm:text-7xl"
           >
             Ask something?
           </motion.h2>

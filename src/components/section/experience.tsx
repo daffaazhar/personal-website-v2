@@ -70,11 +70,11 @@ const Experience = () => {
               }}
               iconClassName="bg-blue-200 bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10"
             >
-              <h3 className="font-semibold capitalize text-white">
+              <h3 className="text-xl font-bold capitalize text-white">
                 {item.title}
               </h3>
-              <p className="font-normal !mt-0 text-white">{item.location}</p>
-              <p className="!mt-1 !font-normal text-[#c7c7c7]">
+              <p className="font-normal !mt-1 text-white">{item.location}</p>
+              <p className="!mt-2 !font-normal text-[#c7c7c7]">
                 {item.description}
               </p>
             </VerticalTimelineElement>

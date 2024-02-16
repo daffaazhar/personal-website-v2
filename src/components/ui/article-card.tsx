@@ -14,7 +14,7 @@ const ArticleCard = ({ data }: { data: ArticleMetadata }) => {
       glareBorderRadius="20px"
       transitionSpeed={2000}
     >
-      <Link href={`/articles/${data.slug}`}>
+      <Link href={`/articles/${data.slug}`} scroll={true}>
         <motion.div className="flex md:flex-row flex-col gap-4 p-4 rounded-2xl border border-white bg-glassmorphism h-full">
           <div className="w-full flex justify-between">
             <div className="flex flex-col">

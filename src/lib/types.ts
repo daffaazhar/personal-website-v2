@@ -13,3 +13,7 @@ export interface ProjectMetadata {
   overview: string;
   techStacks: string[];
 }
+
+export interface TechStack {
+  [key: string]: string;
+}
