@@ -75,7 +75,7 @@ const DetailProject = ({
               width={750}
               height={250}
               alt={metadata.title}
-              className="w-full rounded-2xl h-96 object-cover"
+              className="w-full rounded-2xl h-[520px] object-cover"
             />
           </motion.div>
           <motion.h1

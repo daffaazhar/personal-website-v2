@@ -19,7 +19,8 @@ const TechStack = () => {
   );
 
   return (
-    <section ref={ref} className="py-36">
+    <section ref={ref} className="relative py-36">
+      <div className="absolute top-[10%] left-[30%] w-80 h-screen bg-[rgba(45,72,152,0.75)] blur-[200px] -rotate-[53.13deg]"></div>
       <div className="wrapper ">
         <motion.p
           variants={fadeIn({

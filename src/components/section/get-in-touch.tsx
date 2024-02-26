@@ -36,7 +36,7 @@ const GetInTouch = () => {
             })}
             initial="initial"
             animate={inView ? "enter" : ""}
-            className="font-extrabold text-white text-2xl sm:text-7xl"
+            className="font-extrabold text-white text-5xl leading-tight sm:leading-none sm:text-7xl"
           >
             Want to have coffee together?
           </motion.h2>
@@ -48,7 +48,7 @@ const GetInTouch = () => {
             })}
             initial="initial"
             animate={inView ? "enter" : ""}
-            className="font-extrabold text-white text-2xl sm:text-7xl"
+            className="font-extrabold text-white text-5xl leading-tight sm:leading-none sm:text-7xl"
           >
             Have any project ideas?
           </motion.h2>
@@ -60,7 +60,7 @@ const GetInTouch = () => {
             })}
             initial="initial"
             animate={inView ? "enter" : ""}
-            className="font-extrabold text-white text-2xl sm:text-7xl"
+            className="font-extrabold text-white text-5xl leading-tight sm:leading-none sm:text-7xl"
           >
             Ask something?
           </motion.h2>
@@ -75,7 +75,7 @@ const GetInTouch = () => {
           animate={inView ? "enter" : ""}
           className="flex items-center gap-x-8 mt-12"
         >
-          <div className="rounded-full bg-neutral-100 dark:bg-white w-max">
+          {/* <div className="rounded-full bg-neutral-100 dark:bg-white w-max">
             <Image
               src="/profile.webp"
               alt="Foto Daffa"
@@ -84,7 +84,7 @@ const GetInTouch = () => {
               priority={true}
               className="w-24 rounded-full"
             />
-          </div>
+          </div> */}
           <div className="flex flex-col gap-y-1">
             <div className="flex items-center gap-x-2">
               <Mail fill="#fff" color="#1a232e" size={28} />

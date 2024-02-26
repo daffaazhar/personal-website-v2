@@ -1,6 +1,32 @@
 import React from "react";
-import { Briefcase, GraduationCap, School2 } from "lucide-react";
+import {
+  Briefcase,
+  Globe,
+  Palette,
+  PencilLine,
+  School2,
+  Smartphone,
+} from "lucide-react";
 import { TechStack } from "./types";
+
+export const OVERVIEW_DATAS = [
+  {
+    title: "Web Development",
+    icon: React.createElement(Globe),
+  },
+  {
+    title: "Mobile Development",
+    icon: React.createElement(Smartphone),
+  },
+  {
+    title: "User Interface Design",
+    icon: React.createElement(Palette),
+  },
+  {
+    title: "Content Writer",
+    icon: React.createElement(PencilLine),
+  },
+];
 
 export const experiencesData = [
   {
@@ -31,6 +57,7 @@ export const experiencesData = [
 ] as const;
 
 export const techStackData = {
+  HTML: "devicon-html5-plain",
   PHP: "devicon-php-plain",
   JavaScript: "devicon-javascript-plain",
   TypeScript: "devicon-typescript-plain",
@@ -38,6 +65,7 @@ export const techStackData = {
   Flutter: "devicon-flutter-plain",
   NextJS: "devicon-nextjs-plain",
   React: "devicon-react-original",
+  Laravel: "devicon-laravel-original",
   Firebase: "devicon-firebase-plain",
   Tailwind: "devicon-tailwindcss-original",
   SASS: "devicon-sass-original",

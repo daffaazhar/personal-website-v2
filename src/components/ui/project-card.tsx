@@ -29,7 +29,7 @@ const ProjectCard = ({ data }: { data: ProjectMetadata }) => {
             alt={data.title}
             width={300}
             height={300}
-            className="rounded-xl w-full"
+            className="rounded-xl w-full h-60 object-cover"
           />
           <h3 className="font-bold text-lg text-white mt-4">{data.title}</h3>
           <p className="text-[#c7c7c7] mt-1">{data.overview}</p>

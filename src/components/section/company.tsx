@@ -45,7 +45,7 @@ const Company = () => {
           />
           <div className="absolute bottom-[20%] left-[30%] w-[52px] h-[52px] rounded-full border-[3px] overflow-hidden border-[#fff]">
             <Image
-              src="/data-polis.png"
+              src="/company/data-polis.png"
               alt="Data Polis"
               width={100}
               height={100}

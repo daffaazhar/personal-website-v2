@@ -3,25 +3,7 @@ import { motion } from "framer-motion";
 import { firaCode } from "@/lib/fonts";
 import { fadeIn } from "@/lib/motion";
 import { OverviewCard } from "@/components/ui/overview-card";
-
-const DATAS = [
-  {
-    title: "Web Developer",
-    image: "",
-  },
-  {
-    title: "Web Developer",
-    image: "",
-  },
-  {
-    title: "Web Developer",
-    image: "",
-  },
-  {
-    title: "Web Developer",
-    image: "",
-  },
-];
+import { OVERVIEW_DATAS } from "@/lib/data";
 
 export default function Overview() {
   const { ref, inView } = useInView({
@@ -42,7 +24,7 @@ export default function Overview() {
         animate={inView ? "enter" : ""}
         className={`${firaCode.className} text-white`}
       >
-        Introduction
+        What I&apos;m Offering
       </motion.p>
       <motion.h2
         variants={fadeIn({
@@ -54,9 +36,9 @@ export default function Overview() {
         animate={inView ? "enter" : ""}
         className="font-black text-4xl lg:text-5xl text-white mt-2"
       >
-        Overview.
+        My Services.
       </motion.h2>
-      <motion.p
+      {/* <motion.div
         variants={fadeIn({
           direction: "up",
           duration: 0.5,
@@ -66,15 +48,23 @@ export default function Overview() {
         animate={inView ? "enter" : ""}
         className="max-w-2xl text-[#c7c7c7] leading-relaxed mt-4"
       >
-        I&apos;m a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I&apos;m a quick learner and collaborate closely with clients
-        to create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let&apos;s work together to bring your ideas to
-        life!
-      </motion.p>
+        <p>
+          Hello! My name is Daffa Azhar and i am 17 years old. My interest in
+          web development started in 2018 (when I was 13 years old) when I tried
+          to edit test scores on the web using inspect element and showed it off
+          to my friends (peace). And it turns out that it taught me a lot about
+          HTML and CSS.
+        </p>
+        <p className="mt-2">
+          Fast-forward to today, I just graduated from high school majoring in
+          math and natural sciences. I also have experience working with Micro,
+          Small and Medium Enterprises owners in various sectors, such as
+          fashion, food, medicine, etc.
+        </p>
+        <p></p>
+      </motion.div> */}
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {DATAS.map((data, index) => (
+        {OVERVIEW_DATAS.map((data, index) => (
           <OverviewCard key={index} index={index} inView={inView} data={data} />
         ))}
       </div>
