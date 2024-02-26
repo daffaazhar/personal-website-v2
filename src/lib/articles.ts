@@ -16,7 +16,10 @@ export function getArticles(limit?: number) {
     const { data: frontmatter } = matter(markdownWithMeta);
 
     return {
-      ...frontmatter,
+      title: frontmatter.title,
+      date: frontmatter.date,
+      tags: frontmatter.tags,
+      overview: frontmatter.overview,
       slug,
     };
   });

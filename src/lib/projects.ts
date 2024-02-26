@@ -16,7 +16,10 @@ export function getProjects(limit?: number) {
     const { data: frontmatter } = matter(markdownWithMeta);
 
     return {
-      ...frontmatter,
+      image: frontmatter.image,
+      title: frontmatter.title,
+      overview: frontmatter.overview,
+      techStacks: frontmatter.techStacks,
       slug,
     };
   });
