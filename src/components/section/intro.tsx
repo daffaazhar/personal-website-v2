@@ -83,7 +83,16 @@ const Intro = () => {
           animate={inView ? "enter" : ""}
           className="flex gap-x-4 mt-8"
         >
-          <Button className="p-7" variant="secondary">
+          <Button
+            onClick={() =>
+              window.open(
+                "https://drive.google.com/file/d/1-ekcFeLaKkm3jbRYDeDCGxpMSwJ4-7qC/view?usp=sharing",
+                "_blank"
+              )
+            }
+            className="p-7"
+            variant="secondary"
+          >
             Get Resume
           </Button>
           <Button className="p-7 bg-blue-200 bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10 hover:bg-opacity-20 hover:bg-blue-200">
