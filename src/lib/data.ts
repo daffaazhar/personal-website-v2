@@ -35,7 +35,7 @@ export const experiencesData = [
     description:
       "Developing an single vendor e-commerce website from scratch. Starting from feature planning, website design, 3rd party API integration, until the deployment stage.",
     icon: React.createElement(Briefcase),
-    date: "2020 - 2021",
+    date: "December 2020 - February 2021",
   },
   {
     title: "Attending College",
@@ -44,7 +44,7 @@ export const experiencesData = [
     description:
       "Being part of the Front-End developers in E-Code, an organization responsible for developing applications needed by all student organizations in EEPIS.",
     icon: React.createElement(School2),
-    date: "2022 - Present",
+    date: "July 2022 - July 2026 (Expected)",
   },
   {
     title: "Intern Front-End Developer",
@@ -52,7 +52,39 @@ export const experiencesData = [
     description:
       "Collaborated with a team of designers and back-end developers on various projects, including siap.apari.or.id, bsakp.apari.or.id, and eztakaful.com.my.",
     icon: React.createElement(Briefcase),
-    date: "2023 - Present",
+    date: "May 2023 - June 2024",
+  },
+  {
+    title: "Full-Time Assistant Product Owner",
+    location: "Countlorie, Surabaya, Indonesia",
+    description:
+      "Collaborated closely with the Product Owner from Agile Product Development PENS and Agile Teknik to build and develop the Countlorie application, a comprehensive calorie tracking platform designed to help users monitor their daily consumption and effectively achieve their ideal weight and fitness goals.",
+    icon: React.createElement(Briefcase),
+    date: "February 2024 - December 2024",
+  },
+  {
+    title: "Full-Time Front-End Developer",
+    location: "Pilarmedia Indonesia, Surabaya, Indonesia",
+    description:
+      "Developed the front-end side for the logistics software ERP system, Solog.id. This system has many services, including logistics order management, fleet & inventory management, warehouse management, finance & accounting, and 8 other features.",
+    icon: React.createElement(Briefcase),
+    date: "June 2024 - October 2024",
+  },
+  {
+    title: "Intern Front-End Developer",
+    location: "Central Bank of Indonesia, Surabaya, Indonesia",
+    description:
+      "Developed and designed the SI-SABI application, an information system aimed at streamlining administrative processes for the PSBI (Program Sosial Bank Indonesia) assistance program, improving efficiency and user experience for both internal staff and beneficiaries.",
+    icon: React.createElement(Briefcase),
+    date: "July 2024 - October 2024",
+  },
+  {
+    title: "Full-Time Front-End Developer",
+    location: "Ordent, Jakarta, Indonesia",
+    description:
+      "Become part of a large development team for the Qlola Cash Management project at PT. Bank Rakyat Indonesia (Persero) Tbk.",
+    icon: React.createElement(Briefcase),
+    date: "July 2024 - October 2024",
   },
 ] as const;
 
