@@ -82,3 +82,11 @@ body {
 .content > blockquote > p {
   @apply pl-4;
 }
+
+.content > ol {
+  @apply list-decimal my-5 ml-6;
+}
+
+.content > ul {
+  @apply list-disc my-5 ml-6;
+}
